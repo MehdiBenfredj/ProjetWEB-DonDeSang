@@ -1,0 +1,58 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+background-image: url("https://www.chatelaillonplage.fr/var/storage/images/media/site-de-la-ville/images/actualites-600x285/2020-don-du-sang/763267-1-fre-FR/2020-don-du-sang_image_600x285.jpg");
+
+}
+h2{
+margin-left:400px;
+}
+#s{
+
+margin-left:400px;
+margin-top:100px;
+}
+#b{
+margin-left:400px;
+}
+
+</style>
+<body>
+
+
+{{> headeradmin}}
+
+<h2>Choissisez le centre:</h2> 
+
+<form action="/supprimercentre" method="POST" class="needs-validation" novalidate>
+
+
+<select id="s" name="s" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" class='form-control' required >
+   <option selected disabled >Choisissez le centre que vous voulez supprimer</option>
+   {{#loop}}
+  <option  >{{nom}}</option>
+  {{/loop}}
+</select>
+
+<p>
+<a><button id="b" type="submit" class="btn btn-primary">Enregistrer</button></a>
+<p>
+
+<div class="m">
+{{> footercentre}}
+</div>
+
+
+</body>
+</head>
+</html>

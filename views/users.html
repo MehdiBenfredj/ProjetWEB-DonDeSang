@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+body{
+
+background-image:url("https://www.clamart.fr/sites/default/files/styles/1280x768/public/AGENDA/AGENDA_g%C3%A9n%C3%A9rique/Don_Sang.jpg?itok=r0lgN6R8");  
+
+}
+
+.footer{
+
+margin-top:350px;
+}
+</style>
+
+<body>
+
+
+{{> headeradmin}}
+<h1>Liste des admines des centre</h1>
+{{#loop}}
+<div class="w3-container">
+  <h2>{{nom}} {{prenom}}</h2>
+
+  <div class="w3-card-4" style="width:100%">
+    
+    <div class="w3-container w3-center">
+    
+     <p>mail :{{mail}}</p>
+     <form action="/supprimeruserfromadmin" method="POST" class="needs-validation" novalidate>
+      <input type="hidden" value={{id}} id="id" name="id">
+      <button type="submit" class="btn btn-primary">Supprimer</button> 
+     
+      </form>
+    </div>
+  </div>
+</div>
+ {{/loop}}
+
+
+
+
+
+<div class="footer">
+{{> footercentre}}
+</div>
+</div>
+</body>
+</head>
+</html>
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+body{
+color:white;
+background-image: url("https://blog.pharma-gdd.com/wp-content/uploads/2017/06/don-sang-controle.jpg");
+}
+</style>
+
+<body>
+
+
+{{> headercentre}}
+
+
+ <div class="margin-control">
+        <div class="container">
+            <form action="/ajoutercentre" method="POST" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="uname">Nom:</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Entrer le nom du centre" name="nom"
+                        required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+            
+               
+                <div class="form-group">
+                    <label for="uname">Adresse :</label>
+                    <input type="text" class="form-control" id="adresse" 
+                        name="adresse" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+                 <div class="form-group">
+                    <label for="uname">Code postal :</label>
+                    <input type="text" class="form-control" id="codePostal" 
+                        name="codePostal" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+                 <div class="form-group">
+                    <label for="uname">mail :</label>
+                    <input type="text" class="form-control" id="mail" 
+                        name="mail" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+                 <div class="form-group">
+                    <label for="uname">numéro de téléphone:</label>
+                    <input type="text" class="form-control" id="numero" 
+                        name="numero" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+
+            <div class="form-group">
+                    <label for="uname">Heure d'ouverture :</label>
+                    <input type="time" class="form-control" id="heureOuverture" 
+                        name="heureOuverture" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+                  <div class="form-group">
+                    <label for="uname">Heure de fermeture :</label>
+                    <input type="time" class="form-control" id="heureFermeture" 
+                        name="heureFermeture" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+                 <div class="form-group">
+                    <label for="uname">logo:</label>
+                    <input type="text" class="form-control" id="logo" 
+                        name="logo" required>
+                    <div class="valid-feedback">Valide.</div>
+                    <div class="invalid-feedback">Vous n'avez pas rempli ce champ</div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+            </form>
+        </div>
+
+        <script>
+            // Disable form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Get the forms we want to add validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </div>
+
+
+
+{{> footercentre}}
+
+</body>
+</head>
+</html>
+
+

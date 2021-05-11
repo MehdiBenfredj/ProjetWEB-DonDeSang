@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+.lien{
+background-color:red;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+.b{
+background-color:  #33BEFF;
+rgba(0, 100, 0, 0.3);
+
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.d{
+background-color: red;
+rgba(0, 100, 0, 0.3);
+margin-top:-10px;
+
+}
+
+
+#priv{
+margin-left:500px;
+}
+</style>
+
+<body>
+
+
+{{> headerdonneur}}
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://ak.picdn.net/shutterstock/videos/1026809060/preview/stock-footage-a-person-squeezes-a-ball-while-donating-blood-at-a-transfusion-center.webm" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Be a Hero</h1>
+        <p class="lead mb-0"></p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="lien">
+
+
+<div class="b">
+<div class="w3-container">
+<h1 id="priv">Vos priviléges</h1>
+</div>
+
+<div class="w3-row w3-border">
+<div class="w3-quarter w3-container w3-white" >
+  <h2>Consulter toutes les collectes à venir qui sont à proximité de vous</h2>
+    
+  <p></p>
+   <a href='/collecteavenir'><p><button class="w3-button w3-aqua">Ajouter</button></p></a>
+</div>
+<div class="w3-quarter w3-container w3-red">
+  <h2>Voir tous les centres à proximité de vous </h2>
+   
+   <a href='/oudonner'><p><button class="w3-button w3-aqua">Voir</button></p></a>
+</div>
+<div class="w3-quarter w3-container w3-white">
+  <h2>Prendre un rendez vous avec un centre pour faire un don</h2>
+  <a href="/rendezvousdonneur"><p><button class="w3-button w3-aqua ">Voir</button></p></a>
+</div>
+<div class="w3-quarter w3-container w3-red">
+  <h2>Vérifier si vous etes éligible</h2>
+  <a ><p><button class="w3-button w3-aqua ">Voir</button></p></a>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

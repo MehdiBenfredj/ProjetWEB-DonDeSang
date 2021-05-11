@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+body{
+
+background-image:url("https://www.clamart.fr/sites/default/files/styles/1280x768/public/AGENDA/AGENDA_g%C3%A9n%C3%A9rique/Don_Sang.jpg?itok=r0lgN6R8");  
+
+}
+
+</style>
+
+<body>
+
+
+{{> headerdonneur}}
+<h1>Vérifier si vous etes éligible</h1> 
+<div class="margin-control">
+        <div class="container">
+            <form action="/eligible" method="POST" class="needs-validation" novalidate>
+            <div class="groupe_sanguin">
+                    <p>Est que vous etes majeur ?</p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="age" value="oui" id="customRadio1" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio1">Oui</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="age" value="non" id="customRadio2" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio2">Non</label>
+                    </div>
+                    
+                </div>
+                    <div class="groupe_sanguin">
+                    <p>Votre poids est supèrieure à 50 kg ? ?</p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="poid" value="oui" id="customRadio3" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio3">Oui</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="poid" value="non" id="customRadio4" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio4">Non</label>
+                    </div>
+                    
+                </div>
+                    <div class="groupe_sanguin">
+                    <p>Votre dernier don date de moins de 8 semaines ?</p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="date" value="oui" id="customRadio5" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio5">Oui</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="date" value="non" id="customRadio6" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio6">Non</label>
+                    </div>
+                    
+                </div>
+                <h3 style="color:red">{{nom}}</h3>
+                  <button type="submit" class="btn btn-primary">Search</button>
+
+</form>
+
+
+<div class="m">
+{{> footercentre}}
+</div>
+</body>
+</head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

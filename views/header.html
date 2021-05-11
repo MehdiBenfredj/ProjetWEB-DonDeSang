@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .modif-opa {
+      opacity: 100%;
+    }
+    #compte{
+    margin-left:530px;}
+  </style>
+
+</head>
+
+<body>
+  <div class="modif-opa">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #33BEFF;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Accueil </a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#oudonner">Ou donner mon sang?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#rejoindre">nous rejoindre</a>
+            </li>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Informations
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#conseils">Conseils avant le don</a></li>
+                    <li><a class="dropdown-item" href="#compatibilite">Compatibilite</a></li>
+                    <li><a class="dropdown-item" href="#Quipeutdonner">Qui peut donner?</a></li>
+                    <li><a class="dropdown-item" href="#importance">Importance du don de sang</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            {{#authenticated}}
+            
+            <div class="collapse navbar-collapse" id="compte">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                   Compte
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    
+                    <li><a class="dropdown-item" href="/logout">se déconnecter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+{{/authenticated}}
+{{^authenticated}}
+          </ul>
+          <form class="d-flex flex-row-reverse bd-highlight" action="/login">
+            <button class="btn p-2 highlight" style="background-color: #c71651;" type="submit">Mon Espace</button>
+          </form>
+          {{/authenticated}}
+        </div>
+      </div>
+    </nav>
+  </div>
+
+</body>
+
+</html>

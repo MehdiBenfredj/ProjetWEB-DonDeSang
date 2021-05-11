@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+body{
+
+background-image:url("https://www.clamart.fr/sites/default/files/styles/1280x768/public/AGENDA/AGENDA_g%C3%A9n%C3%A9rique/Don_Sang.jpg?itok=r0lgN6R8");  
+
+}
+.m{
+margin-top:170px;
+}
+</style>
+
+<body>
+
+
+{{> headercentre}}
+<h1>Chercher un donneur avec un groupe sanguin précis qui sont à proximité</h1> 
+<div class="margin-control">
+        <div class="container">
+            <form action="/chercherdonneur" method="POST" class="needs-validation" novalidate>
+            <div class="groupe_sanguin">
+                    <p>Selectionner votre groupe sanguin</p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" value="O" id="customRadio1" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio1"> Groupe: O</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" value="A" id="customRadio2" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio2">Groupe: A</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" value="B" id="customRadio3" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio3">Groupe: B</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" value="AB" id="customRadio4" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio4">Groupe: AB</label>
+                    </div>
+                </div>
+                <div class="rhesus">
+
+                    <p>Selectionner votre Rhesus</p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio5" name="customRadio2" value="+" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio5"> Rhesus positif +</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio6" name="customRadio2" value="-" class="custom-control-input"
+                            required>
+                        <label class="custom-control-label" for="customRadio6"> Rhesus negatif -</label>
+                    </div>
+                </div>
+                
+                  <button type="submit" class="btn btn-primary">Search</button>
+
+</form>
+
+
+<div class="m">
+{{> footercentre}}
+</div>
+</body>
+</head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>adminCentre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script></script>
+
+<style>
+body{
+background-image:url('https://www.mmj.fr/sites/default/files/public/images/don_de_sanfg-actu_mmj.png')
+}
+.secondcard{
+margin-left:650px;
+margin-top:-350px;
+
+}
+</style>
+
+
+
+<body>
+
+
+
+
+ {{> headerdonneur}}
+ {{#loop}}
+<div class="w3-container">
+  <h2>{{nom1}}</h2>
+
+  <div class="w3-card-4" style="width:40%">
+    <img src="http://www.estuaire.org/wp-content/uploads/2019/04/DON-DU-SANG-960x600.jpg" alt="Alps" style="width:100%">
+    <div class="w3-container w3-center">
+      <p>{{description1}}</p>
+      <p>{{date1}}</p>
+      <p>{{lieu1}}</p>
+      <p>{{codePostal}}</p>
+     <p>Heure d'ouverture:{{heureOuverture1}}</p>
+     <p>Heure de fermeture:{{heureFermeture1}}</p>
+      
+    </div>
+  </div>
+  
+  </div>
+  
+  
+</div>
+<div class="secondcard">
+<div class="w3-container">
+  <h2>{{nom}}</h2>
+
+  <div class="w3-card-4" style="width:82%">
+    <img src="http://www.estuaire.org/wp-content/uploads/2019/04/DON-DU-SANG-960x600.jpg"   alt="Alps" style="width:100%">
+    <div class="w3-container w3-center">
+     <p>{{description}}</p>
+      <p>{{date}}</p>
+      <p>{{lieu}}</p>
+      <p>{{codePostal}}</p>
+     <p>Heure d'ouverture:{{heureOuverture}}</p>
+     <p>Heure de fermeture:{{heureFermeture}}</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+ {{/loop}}
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+ </body>
+ 
